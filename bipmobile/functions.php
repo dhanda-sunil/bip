@@ -359,10 +359,10 @@ function renderFrontItem($id){
 		 
 	$output .= '<div class="row '.(($postType == 'ricariche')?'':'hr_shadow_down').' lowerSection" style="margin-bottom:50px">';
 		$output .= '<div class="span3 border gray">';
-			$output .= '<a href="#"><div class="center image200">'.get_the_post_thumbnail($id, array(200,200) , array('title' => $title, 'alt' => $title)).'</div>';
+			$output .= '<a href="'.$bottom_box1_link.'"><div class="center image200">'.get_the_post_thumbnail($id, array(200,200) , array('title' => $title, 'alt' => $title)).'</div></a>';
 			/*$output .= '<div><h6 class="center">'.$title.'</h6></div></a>';
 			$output .= '<p class="center small"><i>'.$shortDesc1.'</i><br><i>'.$shortDesc2.'</i></p>';*/
-			$output .= '<div class="center config row-fluid"><a class="span8 offset2 button golden" href="'.$bottom_box1_link.'"><i>'.$options[$shortname.'_productpage_bottombox1_button'].'</i></a></div>';
+			$output .= '<div class="center config row-fluid"><a class="btn btn-golden" href="'.$bottom_box1_link.'"><i>'.$options[$shortname.'_productpage_bottombox1_button'].'</i></a></div>';
 		$output .= '</div>';
 		$output .= renderProductBottomBoxes($bottom_box2_link);  
 	$output .= '</div>';
@@ -379,7 +379,7 @@ function renderProductBottomBoxes($bottom_box2_link='#'){
 		$output .= '<a href="'.$bottom_box2_link.'"><div class="center image"><img src="'.WPTHEME_URL.'/assets/img/icona_03.jpg'.'"></div>';
 		$output .= '<div><h6 class="center">'.$options[$shortname.'_productpage_bottombox2_title'].'</h6></div></a>';
 		$output .= '<p class="center small"><i>'.$options[$shortname.'_productpage_bottombox2_desc'].'</i></p>';
-		$output .= '<div class="center config row-fluid"><a class="span8 offset2 button lightBlack" href="'.$bottom_box2_link.'"><i>'.$options[$shortname.'_productpage_bottombox2_button'].'</i></a></div>';
+		$output .= '<div class="center config row-fluid"><a class="btn btn-black" href="'.$bottom_box2_link.'"><i>'.$options[$shortname.'_productpage_bottombox2_button'].'</i></a></div>';
 	$output .= '</div>';
 	$output .= '<div class="span3 border gray">';
 		$output .= '<a href="'.WPSITE_URL.'/punti-vendita/"><div class="center image"><img src="'.WPTHEME_URL.'/assets/img/icona_02.jpg'.'"></div>';

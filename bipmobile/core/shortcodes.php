@@ -342,7 +342,7 @@ function bip_tariff_table($atts){
 													$itemName = 'item_'.$i.'_column'.$j;
 													$output	.='<div class="inline center itemClm'.$j.'">'.(isset($meta[$itemName]) && !empty($meta[$itemName]) ? $meta[$itemName] : '').'</div>';
 												}
-												$output	.='<div class="inline center description"> <a class="button black" href="'.(isset($meta['item_'.$i.'_button_link']) && !empty($meta['item_'.$i.'_button_link']) ? $meta['item_'.$i.'_button_link'] : '').'">'.(isset($meta['item_'.$i.'_button_text']) && !empty($meta['item_'.$i.'_button_text']) ? $meta['item_'.$i.'_button_text'] : '').'</a></div>
+												$output	.='<div class="inline center description"> <a class="btn btn-black" href="'.(isset($meta['item_'.$i.'_button_link']) && !empty($meta['item_'.$i.'_button_link']) ? $meta['item_'.$i.'_button_link'] : '').'">'.(isset($meta['item_'.$i.'_button_text']) && !empty($meta['item_'.$i.'_button_text']) ? ucfirst(strtolower($meta['item_'.$i.'_button_text'])) : '').'</a></div>
 												</div>';
 												if($i!=$items){
 													$output	.= '<div class="tt_columns'.$columns.'">';
@@ -411,7 +411,7 @@ function bip_tariff_table($atts){
 																	$itemName = 'item_'.$i.'_column'.$j;
 																	$output	.='<div class="inline center itemClm'.$j.'">'.(isset($meta[$itemName]) && !empty($meta[$itemName]) ? $meta[$itemName] : '').'</div>';
 																}
-																$output	.='<div class="inline center description"> <a class="button black" href="'.(isset($meta['item_'.$i.'_button_link']) && !empty($meta['item_'.$i.'_button_link']) ? $meta['item_'.$i.'_button_link'] : '').'">'.(isset($meta['item_'.$i.'_button_text']) && !empty($meta['item_'.$i.'_button_text']) ? $meta['item_'.$i.'_button_text'] : '').'</a></div>
+																$output	.='<div class="inline center description"> <a class="btn btn-black" href="'.(isset($meta['item_'.$i.'_button_link']) && !empty($meta['item_'.$i.'_button_link']) ? $meta['item_'.$i.'_button_link'] : '').'">'.(isset($meta['item_'.$i.'_button_text']) && !empty($meta['item_'.$i.'_button_text']) ?ucfirst(strtolower($meta['item_'.$i.'_button_text'])) : '').'</a></div>
 																</div>';
 																if($i!=$items){
 																	$output	.= '<div class="tt_columns'.$columns.'">';
@@ -1037,7 +1037,7 @@ function bip_item_detail_bottom($atts){
 				$output .= '<a href="'.$bottom_box1_link.'"><div class="center image200">'.get_the_post_thumbnail($id, array(200,200) , array('title' => $title, 'alt' => $title)).'</div>';
 				/*$output .= '<div><h6 class="center">'.$title.'</h6></div></a>';
 				$output .= '<p class="center small"><i>'.$shortDesc1.'</i><br><i>'.$shortDesc2.'</i></p>';*/
-				$output .= '<div class="center config row-fluid"><a class="span8 offset2 button golden" href="'.$bottom_box1_link.'"><i>'.$options[$shortname.'_productpage_bottombox1_button'].'</i></a></div>';
+				$output .= '<div class="center config"><a class="btn btn-golden" href="'.$bottom_box1_link.'"><i>'.$options[$shortname.'_productpage_bottombox1_button'].'</i></a></div>';
 			$output .= '</div>';
 			$output .= renderProductBottomBoxes($bottom_box2_link);  
 		$output .= '</div>';

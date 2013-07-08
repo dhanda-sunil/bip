@@ -702,7 +702,11 @@ if (!class_exists($bip_core_class)) {
 				}else{
 					$home	= '';
 				}
-				$newUrl		= $http.'//'.$_SERVER['HTTP_HOST'];
+				if($http.'//'.$_SERVER['HTTP_HOST'] != $url){
+					$newUrl		= 'http://pre.bip.it';
+				}else{
+					$newUrl		= $url;
+				}
 				$content	= str_replace($url, $newUrl, $content);
 			/*}*/
 			

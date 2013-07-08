@@ -43,10 +43,10 @@
             <p>Scarica il prospetto informativo [<a href="#">qui</a>]</p>
             
             <div class="row-fluid">
-            	<div class="span3"><a class="button golden" href="#">COSTI</a></div>
-                <div class="span3"><a class="button golden" href="#">FAQ</a></div>
-                <div class="span3"><a class="button golden" href="#">ASTERO</a></div>
-                <div class="span3"><a class="button golden" href="#">OPZIONI COMPATIBILI</a></div>
+            	<div class="span3"><a class="btn btn-golden" href="#">COSTI</a></div>
+                <div class="span3"><a class="btn btn-golden" href="#">FAQ</a></div>
+                <div class="span3"><a class="btn btn-golden" href="#">ASTERO</a></div>
+                <div class="span3"><a class="btn btn-golden" href="#">OPZIONI COMPATIBILI</a></div>
             </div>
        </div>
 	</div>

@@ -9,7 +9,8 @@
 		'templates/shops.php',
         'templates/connect.php',
         'templates/products.php',
-        'templates/configuration.tpl'
+        'templates/copertura.php',
+        'templates/configuration.php'
     );
 	$stylesheet_directory 	= get_stylesheet_directory();
 	$template_directory		= get_template_directory();
@@ -49,10 +50,10 @@
 				$shops	= json_decode(file_get_contents('http://store.bip.it/getDealers.php?provincia='.$s));
 			}
 		}
-		include(get_stylesheet_directory() . '/templates/shops-list.php');
+		include(WPTHEME_PATH . '/templates/shops-list.php');
 	
 	elseif (is_search() || BipCore::isSearch()!='') :
-		load_template(get_stylesheet_directory() . '/search.php');
+		load_template(WPTHEME_PATH . '/search.php');
 	
 	elseif (BipCore::isAdministratorUserLoggedIn()) : ?>
     <div>

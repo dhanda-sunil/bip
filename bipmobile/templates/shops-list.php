@@ -6,17 +6,26 @@
 <div class="page staff <?php echo implode(' ', get_post_class()); ?>" id="<?php echo esc_attr(basename(get_permalink())); ?>">
 	<div class="container">
 		<?php
-		if(!$shops->hasError && $shops->totalDealers>0){
+		if(!is_numeric($s)){
+			$cap_result		= $wpdb->get_row( $wpdb->prepare( "SELECT * FROM wpb_province_list p WHERE p.`abbr` = '".$s."'") );
+			$province	= isset($cap_result->slug)?', '.$cap_result->slug:'';
+		}else{
+			$province 	= ', '.$s;
+		}
+		
+		if(!$shops->hasError && $shops->totalDealers>0 && (count($cap_result)>0 || is_numeric($s))){
 			?>
 			<div id="shop_list">
 				<div class="row list-head">
 					<div class="span12"><b><?php echo $shops->totalDealers;?></b> risultati trovati</div>
 				</div>
                 <div class="row">
-                	<div class="span4 list-body">
-					<?php $dealers = array();
+                	<div class="span4 list-body" style="max-height:640px;overflow-y:scroll;display: block;">
+					<?php 
+					$dealers 	= array();
+					
                     foreach($shops->dealers as $i=>$shop){
-						$dealers[$i]['address'] = $shop->address;
+						$dealers[$i]['address'] = $shop->address.$province;
 						$dealers[$i]['title'] 	= $shop->firmName;
                         ?>
                         <div class="shop_info <?php echo ($i%2==0)?'':'even';?>">
@@ -38,7 +47,7 @@
                     ?>
                     </div>
                     <div class="span8">
-						<?php echo render_shop_map($dealers, array('w'=>660, 'h'=>740));?>
+						<?php echo render_shop_map($dealers, array('w'=>620, 'h'=>640));?>
                     	<div class="mapOuter">      
                           <div id="map_canvas"></div>
                         </div>
@@ -54,7 +63,12 @@
 			</div>
 		<?php
 		}else{
-		$limit 		= 20;
+			?>
+            <div id="shop_list">
+            	Sorry, the Province (<?php echo $s;?>) you search doesn't exists.
+            </div>
+        <?php
+		/*$limit 		= 20;
 		$offset 	= (isset($_GET['start']) && $_GET['start']!='')?$_GET['start']:0;
 		
 		$args = array(
@@ -114,7 +128,7 @@
 				</div>
 			</div>
 		<?php endif; // end have_posts() check
-		}?>
+*/		}?>
 	   <?php echo bip_corner();?>
 	</div>
 </div>

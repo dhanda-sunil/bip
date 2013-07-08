@@ -14,7 +14,7 @@
             <div id="item-detail" class="row">
                 <div class="span6">
                     <h1 class="right larger"><?php the_title(); ?></h1>
-                    <h3 class="right slim">Lorem Ipsome</h3>
+                    <h3 class="right slim">Configura il telefonino</h3>
                     <h3 class="right">Doloro sit</h3>
                 </div>
                 <div class="span6 center">
@@ -24,8 +24,8 @@
             <div class="clear">
             <div class="row">
             	<div class="span12">
-                	<h2 class="orange">Un'offerta unica, semplice, economica e per sempre.</h2>
-                    <p class="dark_gray"><i>Semplice, perché consente di <b>chiamare tutti gli operatori di telefonia fissa e mobile,</b> economica, perché a soli <b>a 3 centesimi al minuto</b> consente un risparmio notevole rispetto alle offerte dello stesso tipo attualmente disponibili e per sempre, perché <b>non è promozionale e non sarà soggetta a rialzi</b> rimanendo invariata nel tempo.</i></p>
+                	<h2 class="orange">Configura il tuo telefonino per navigare in internet, configurare SMS ed inviare MMS.</h2>
+                    <!--<p class="dark_gray"><i>Semplice, perché consente di <b>chiamare tutti gli operatori di telefonia fissa e mobile,</b> economica, perché a soli <b>a 3 centesimi al minuto</b> consente un risparmio notevole rispetto alle offerte dello stesso tipo attualmente disponibili e per sempre, perché <b>non è promozionale e non sarà soggetta a rialzi</b> rimanendo invariata nel tempo.</i></p>-->
                 </div>
             </div>
             <hr class="shadow_down" />
@@ -37,7 +37,7 @@
                         <br />
                         <div class="row-fluid marb40">
                         	<input class="span8" type="text" name="" placeholder="Numero di telefono" />
-                            <a class="span3 button black_normal" href="#" style="margin-left:20px;">Invia</a>
+                            <a class="span3 btn btn-black" href="#" style="margin-left:20px;">Invia</a>
                         </div>
                         <br />
                         <p class="small light_gray">Per navigare configura rapidamente il punto di accesso <a href="javascript:void(0)" onclick="jQuery('#confBox1').modal();"><b class="orange">clicca qui</b></a></p>
@@ -250,7 +250,7 @@
                         </div>
                         <br class="mart40 marb40">
                         <div class="row-fluid mart40 marb40">
-                            	<a class="span4 offset4 button black_normal disable" href="<?php echo WPSITE_URL;?>/wp-content/uploads/2013/06/Manuale-X230.pdf">Guida all’utilizzo</a>
+                            	<a class="span4 offset4 btn btn-black disable" href="<?php echo WPSITE_URL;?>/wp-content/uploads/2013/06/Manuale-X230.pdf">Guida all’utilizzo</a>
                        	</div>
                         <br />
                     </div>
@@ -265,8 +265,8 @@
                             	<h3 class="orange">ALCATEL ONE TOUCH X230</h3>
                                 <h6 class="slim light_gray">La tua chiavetta internet con 3 mesi di traffico incluso.</h6>
                                 <p><h6 class="slim light_gray">Naviga veloce e senza pensieri fino a 1GB a settimana senza limiti di tempo.</h6></p>
-                                <a class="span5 button black_normal" href="<?php echo WPSITE_URL;?>/wp-content/uploads/2013/06/Manuale-X230.pdf">Guida all’utilizzo</a>
-                                <a class="span5 offset1 button black_normal" href="javascript:void(0)" onclick="jQuery('#confBox2').modal();">Scheda tecnica</a>
+                                <a class="span5 btn btn-black" href="<?php echo WPSITE_URL;?>/wp-content/uploads/2013/06/Manuale-X230.pdf">Guida all’utilizzo</a>
+                                <a class="span5 offset1 btn btn-black" href="javascript:void(0)" onclick="jQuery('#confBox2').modal();">Scheda tecnica</a>
                                 <!-- Modal -->
                                 <div id="confBox2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
                                   <div class="modal-header">

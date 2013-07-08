@@ -94,6 +94,7 @@
                 	<div class="clear"></div>
                 	<div class="home_product">
                     	<div class="home_product_inner">
+                        	<a href="<?php echo BipCore::changeUrlDynamically($link);?>">
                         	<div class="type"><?php echo __(str_replace($search ,$replace, strtoupper($postType)), 'bipmobile' );?></div>
                         	<div class="product_image">
                                 <?php echo ($boxImage!='')?'<img src="'.BipCore::changeUrlDynamically($boxImage).'" width="100">':BipCore::changeUrlDynamically($image);?>
@@ -106,8 +107,9 @@
                                     <a href="<?php echo $descLink;?>"><?php echo ($description!='')?'[dettagli]':'';?></a>
                                     <div class="description_content" style="display:none"><?php echo $description;?></div>
                                 </div>-->
-                                <div class="button"><a href="<?php echo BipCore::changeUrlDynamically($link);?>"><?php echo strtoupper($buttonText);?></a></div>
+                                <div class="btn btn-mini btn-black pull-right"><!--<a href="<?php echo BipCore::changeUrlDynamically($link);?>">--><?php echo ucfirst(strtolower($buttonText));?><!--</a>--></div>
                             </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +198,8 @@
 						?>
                         <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" style="float: left; list-style: none;" jcarouselindex="1">
                             <div class="home_option">
-                            	<div class="product_image"><?php echo ($slideImage!='')?'<img src="'.BipCore::changeUrlDynamically($slideImage).'" width="80" />':BipCore::changeUrlDynamically($image);?></div>
+                            	<a href="<?php echo BipCore::changeUrlDynamically($link);?>">
+                                <div class="product_image"><?php echo ($slideImage!='')?'<img src="'.BipCore::changeUrlDynamically($slideImage).'" width="80" />':BipCore::changeUrlDynamically($image);?></div>
                                 <div class="product_content">
                                     <!--<div class="type">&nbsp;<?php //echo strtoupper($type);?></div>-->
                                     <h1 class="title"><?php echo $title;?></h1>
@@ -208,8 +211,9 @@
                                         <span><?php echo ($description!='')?'[dettagli]':'';?></span>
                                         <div class="description_content" style="display:none"><?php echo $description;?></div>
                                     </div>-->
-                                    <a class="button" href="<?php echo BipCore::changeUrlDynamically($link);?>"><?php echo strtoupper($buttonText);?></a>
-                                </div> 
+                                    <span class="btn btn-mini btn-black pull-right"><?php echo ucfirst(strtolower($buttonText));?></span>
+                                </div>
+                                </a> 
                                 <div class="clear"></div>
                                                              
                             </div>
@@ -251,7 +255,7 @@
             <div class="center image"><img src="<?php echo BipCore::changeUrlDynamically($uri.'/assets/img/icona_03.jpg');?>"></div>
             <div><h6 class="center"><?php echo 'CONFRONTA LE TARIFFE';?></h6></div>
             <p class="center small"><i><?php echo 'Scegli il piano pi&ugrave; adatto a te';?></i></p>
-            <div class="center config row-fluid"><a class="span8 offset2 button lightBlack" href="<?php echo BipCore::changeUrlDynamically(WPSITE_URL);?>/tariffe/"><i>Confronta</i></a></div>
+            <div class="center config row-fluid"><a class="btn btn-black" href="<?php echo BipCore::changeUrlDynamically(WPSITE_URL);?>/tariffe/">Confronta</a></div>
         </div>
         
         <div class="span3">

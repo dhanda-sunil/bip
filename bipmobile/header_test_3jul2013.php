@@ -5,14 +5,14 @@ $shortname 		= BipMobileThemeOptions::cfg('shortname');
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>><head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-    <title><?php
-            /*
-             * Print the <title> tag based on what is being viewed.
-             * We filter the output of wp_title() a bit -- see
-             * BipCore::filterWpTitle() in functions.php.
-             */
-            wp_title( '|', true, 'right' );
-    ?></title>
+        <title><?php
+                /*
+                 * Print the <title> tag based on what is being viewed.
+                 * We filter the output of wp_title() a bit -- see
+                 * BipCore::filterWpTitle() in functions.php.
+                 */
+                wp_title( '|', true, 'right' );
+        ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -126,7 +126,7 @@ $shortname 		= BipMobileThemeOptions::cfg('shortname');
             </p>
         </div>
     <?php endif; ?>
-	<div class="menu span7" style="width:570px;">
+	<div class="menu span7">
     <!-- Navigation -->
     <?php $menu_result = wp_nav_menu( array( 'fallback_cb' => array('BipCore', 'emptyMenuFallback'), 'depth' => 3, 'menu_class' => 'primary-nav', 'theme_location' => BipCore::TOP_MENU_LOCATION, 'container' => 'nav') ); ?>
     <?php if ($menu_result === false) BipCore::emptyMenuFallback(array()); // For wp 3.5 only ?>

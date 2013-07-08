@@ -11,11 +11,8 @@
                     <a class="smaller">Diventa 	Partner</a>-->
                 </div>
                 <div class="span6 right">
-               		<div>
-                    	<span class="smaller" style="margin-right:10px;">Assistenza clienti: <b class="title-color">4050</b></span>
-                    	<span class="smaller">Bip informa: <b class="title-color">06 62288213</b></span>
-                    </div>
-                    <div><span class="smaller">Email: <b class="title-color">contatto@bip.it<?php //bloginfo('admin_email');?></b></span></div>
+               		<span class="smaller" style="margin-right:10px;">Assistenza clienti: <b class="title-color">4050</b></span>
+                    <span class="smaller">Bip informa: <b class="title-color">06 62288213</b></span>
                 </div>
             </div>
             
@@ -24,15 +21,15 @@
             	<div>
                     <div class="span4">
                     	<img class="pull-left" src="<?php echo BipCore::changeUrlDynamically(WPTHEME_URL.'/assets/img/soddisfatti.png');?>"/>
-                    	<span class="pull-left"><div>SODDISFATTI</div><div>O RIMBORSATI</div></span>
+                    	<a class="pull-left"><div>SODDISFATTI</div><div>O RIMBORSATI</div></a>
                     </div>
                     <div class="span4">
                     	<img class="pull-left" src="<?php echo BipCore::changeUrlDynamically(WPTHEME_URL.'/assets/img/spedizione.png');?>"/>
-                    	<span class="pull-left"><div>SPEDIZIONE</div><div>GRATUITA</div></span>
+                    	<span><a class="pull-left" ><div>SPEDIZIONE</div><div>GRATUITA</div></a></span>
                     </div>
                     <div class="span4">
                     	<img class="pull-left" src="<?php echo BipCore::changeUrlDynamically(WPTHEME_URL.'/assets/img/pagamenti.png');?>"/>
-                    	<span class="pull-left"><div>PAGAMENTI</div><div>SICURI</div></span>
+                    	<span><a class="pull-left" ><div>PAGAMENTI</div><div>SICURI</div></a></span>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -66,9 +63,8 @@
 			}
 			?>
             <div class="row section3">   
-                <div class="span8">
-                	<div class="row-fluid">
-                    <div class="span3" style=""><!--width:180px-->
+                <div>
+                    <div class="span3" style="width:180px;">
                     	<h3 class="title-color">OFFERTA</h3>
                         <?php //echo getTariffs();?>
                         <ul>
@@ -94,7 +90,7 @@
 							?>
                         </ul>
                     </div>
-                    <div class="span4">
+                    <div class="span3" style="width:190px;">
                     	<h3 class="title-color">INFORMAZIONI</h3>
                         <ul>
 							<?php
@@ -107,7 +103,7 @@
 							?>
                         </ul>
                     </div>
-                    <div class="span5">
+                    <div class="span3" style="width:200px">
                     	<h3 class="title-color">IL MIO ACCOUNT</h3>
                         <ul>
                         	<?php
@@ -120,20 +116,14 @@
 							?>
                         </ul>
                     </div>
-                    <div class="span9">
-                    	<img style="margin:8px 0px 0px -50px" src="<?php echo BipCore::changeUrlDynamically(WPTHEME_URL.'/assets/img/pagamento.png');?>" />
+                    <div class="span8">
+                    	<img style="margin:8px 0px 0px -85px" src="<?php echo BipCore::changeUrlDynamically(WPTHEME_URL.'/assets/img/pagamento.png');?>" />
                     </div>
-                    </div>
-                </div>
-                <div class="span4">
+                
                 <!-- Footer Sidebar -->
                 <?php if ( is_active_sidebar( 'footer-sidebar') ) : ?>
                         <?php dynamic_sidebar( 'footer-sidebar' ); ?>
                 <?php endif; ?>
-                </div>
-            </div>
-            <hr>
-               
                 <?php //elseif (BipCore::isAdministratorUserLoggedIn()): ?>
                     <!--<div class="span12">
                         <p class="alert clearfix">
@@ -143,6 +133,9 @@
                         </p>
                     </div>-->
                 <?php //endif; ?>
+                </div>
+            </div>
+            <hr>
             </div>
         </div>
        	<!-- Copyright -->
